@@ -4,11 +4,9 @@ def badge_maker(name)
 end
 
 def batch_badge_creator(arr)
-  out = []
-  arr.each do |name|
-    out.push(badge_maker(name))
+  arr.collect do |name|
+    badge_maker(name)
   end
-  out
 end
 
 def assign_rooms(arr)
